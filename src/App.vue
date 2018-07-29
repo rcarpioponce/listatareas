@@ -1,8 +1,7 @@
 <template>
   <div id="app" class="container">
     <div class="jumbotron">
-      <titulo :titulo="titulo"></titulo>
-      {{numTareas}}
+      <titulo :titulo="titulo" :numTareas="numTareas"></titulo>
       <nueva-tarea :tareas="tareas" :actualizarContador="actualizarContador"></nueva-tarea>   
       <lista-tareas :tareas="tareas"></lista-tareas>   
     </div>
