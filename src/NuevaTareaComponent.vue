@@ -22,8 +22,10 @@ export default {
 					texto: texto,
 					terminada: false
 				});
+				this.$emit('incrementarContador',1);
 			}
 			this.nuevaTarea = '';
+
 		}
 	}
 }	

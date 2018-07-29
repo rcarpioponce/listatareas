@@ -2,7 +2,8 @@
   <div id="app" class="container">
     <div class="jumbotron">
       <titulo :titulo="titulo"></titulo>
-      <nueva-tarea :tareas="tareas"></nueva-tarea>   
+      {{numTareas}}
+      <nueva-tarea :tareas="tareas" v-on:incrementarContador="numTareas += $event"></nueva-tarea>   
       <lista-tareas :tareas="tareas"></lista-tareas>   
     </div>
   </div>
@@ -21,6 +22,7 @@ export default {
   data(){
     return {
       titulo: 'Lista de tareas',
+      numTareas: 3,
       tareas: [
         {
           texto: 'Aprender Vue.js',
