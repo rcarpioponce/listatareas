@@ -7,6 +7,7 @@
 	</div>		
 </template>
 <script>
+import { bus } from './main.js'	
 export default {
 	data(){
 		return {
@@ -22,11 +23,15 @@ export default {
 					texto: texto,
 					terminada: false
 				});
-				this.actualizarContador();
+				//this.actualizarContador();
+				bus.$emit('actualizarContador',this.tareas.length);
 			}
 			this.nuevaTarea = '';
 
 		}
+	},
+	created(){
+		bus.$emit('actualizarContador',this.tareas.length);
 	}
 }	
 </script>
