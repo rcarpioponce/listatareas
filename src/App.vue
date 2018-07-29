@@ -3,6 +3,7 @@
     <div class="jumbotron">
       <titulo :titulo="titulo"></titulo>
       <nueva-tarea :tareas="tareas"></nueva-tarea>   
+      <lista-tareas :tareas="tareas"></lista-tareas>   
     </div>
   </div>
 </template>
@@ -10,10 +11,12 @@
 <script>
 import Titulo from './TituloComponent.vue'
 import NuevaTarea from './NuevaTareaComponent.vue'
+import ListaTareas from './ListaTareasComponent.vue'
 export default {
   components:{
     Titulo,
-    NuevaTarea
+    NuevaTarea,
+    ListaTareas
   },
   data(){
     return {
