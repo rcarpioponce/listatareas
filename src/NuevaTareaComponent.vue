@@ -13,7 +13,7 @@ export default {
 			nuevaTarea:'',
 		}
 	},
-	props:['tareas'],
+	props:['tareas','actualizarContador'],
 	methods: {
 		agregarTarea(){
 			let texto = this.nuevaTarea.trim();
@@ -22,7 +22,7 @@ export default {
 					texto: texto,
 					terminada: false
 				});
-				this.$emit('incrementarContador',1);
+				this.actualizarContador();
 			}
 			this.nuevaTarea = '';
 

@@ -3,7 +3,7 @@
     <div class="jumbotron">
       <titulo :titulo="titulo"></titulo>
       {{numTareas}}
-      <nueva-tarea :tareas="tareas" v-on:incrementarContador="numTareas += $event"></nueva-tarea>   
+      <nueva-tarea :tareas="tareas" :actualizarContador="actualizarContador"></nueva-tarea>   
       <lista-tareas :tareas="tareas"></lista-tareas>   
     </div>
   </div>
@@ -37,6 +37,11 @@ export default {
           terminada: false
         }                
       ]
+    }
+  },
+  methods: {
+    actualizarContador(){
+      this.numTareas++;
     }
   }
 }
